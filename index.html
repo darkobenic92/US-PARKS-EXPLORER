@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>US Parks Explorer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
+</head>
+<body>
+  <div id="map"></div>
+
+  <div id="controlPanel">
+    <div class="header">
+      <h1>🌲 US Parks Explorer</h1>
+      <button id="themeToggle" class="btn-icon" title="Toggle Dark Mode">🌙</button>
+    </div>
+
+    <div class="filters">
+      <div class="filter-group">
+        <label for="countryFilter">Filter by State:</label>
+        <select id="countryFilter">
+          <option value="all">All States</option>
+        </select>
+      </div>
+      <div class="filter-group search-refresh">
+        <input type="text" id="searchInput" placeholder="Search parks..." />
+        <button id="refreshBtn">🔄</button>
+      </div>
+    </div>
+
+    <div id="stats" class="stats">
+      <div class="stat-item">
+        <span class="stat-label">Total Parks:</span>
+        <span class="stat-value" id="totalParks">0</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Showing:</span>
+        <span class="stat-value" id="showingParks">0</span>
+      </div>
+    </div>
+
+    <div id="parksList" class="parks-list"></div>
+
+    <div id="loading" class="loading">Loading parks data...</div>
+  </div>
+
+  <div id="legend" class="legend">
+    <h3>States</h3>
+    <div id="legendContent"></div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
+</body>
+</html>

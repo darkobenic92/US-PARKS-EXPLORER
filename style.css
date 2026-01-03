@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: url('https://eoimages.gsfc.nasa.gov/images/imagerecords/74000/74192/world.topo.bathy.200412.3x21600x10800.jpg') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+}
+
+#map { height: 100vh; width: 100%; z-index: 0; }
+
+#controlPanel {
+    position: absolute; top: 10px; left: 10px;
+    width: 320px; max-height: 90vh;
+    background: rgba(255,255,255,0.5); border-radius:10px;
+    padding:15px; box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    overflow-y:auto; z-index:1000;
+}
+
+#controlPanel .header { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+#controlPanel h1 { font-size:18px; margin:0; }
+.btn-icon { cursor:pointer; font-size:18px; border:none; background:none; }
+
+.filters { display:flex; flex-direction:column; gap:8px; margin-bottom:10px; }
+.filter-group { display:flex; flex-direction:column; }
+.filter-group label { font-size:12px; margin-bottom:4px; }
+.filter-group input, .filter-group select { padding:6px 8px; font-size:14px; border-radius:5px; border:1px solid #ccc; }
+.filter-group.search-refresh { display:flex; gap:5px; }
+#refreshBtn { padding:6px 10px; font-size:16px; cursor:pointer; border-radius:5px; border:1px solid #ccc; background-color:#f8f8f8; }
+
+.stats { display:flex; justify-content:space-between; font-size:13px; margin-bottom:10px; }
+.stat-item { display:flex; gap:4px; }
+
+.parks-list { display:flex; flex-direction:column; gap:6px; }
+.park-card { background:#32bb5b; padding:8px 10px; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.15); cursor:pointer; transition:transform 0.1s; }
+.park-card:hover { transform:scale(1.02); }
+.park-name { font-weight:bold;  font-size:14px; }
+.park-info { font-size:12px; display:flex; align-items:center; gap:6px; margin-top:2px; }
+
+.loading { text-align:center; padding:10px; font-size:14px; color:#555; }
+
+.legend {
+    position:absolute; bottom:10px; right: 10px;
+    background:rgba(250, 248, 248, 0.95); border-radius:8px;
+    padding:10px; font-size:12px; z-index:1000;
+    max-height:200px; overflow-y:auto; box-shadow:0 2px 8px rgba(0,0,0,0.3);
+}
+.legend-item { display:flex; align-items:center; gap:6px; margin-bottom:4px; }
+.legend-color { width:12px; height:12px; border-radius:50%; border:1px solid #888; }
+
+.dark-mode { background-color:#1e1e1e; color:#f0f0f0; }
+.dark-mode #controlPanel, .dark-mode .legend { background: rgba(30,30,30,0.95); color:#f0f0f0; }
+.dark-mode input, .dark-mode select, .dark-mode #refreshBtn { background:#333; color:#f0f0f0; border:1px solid #555; }
+
+#controlPanel::-webkit-scrollbar, .legend::-webkit-scrollbar { width:6px; }
+#controlPanel::-webkit-scrollbar-thumb, .legend::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.3); border-radius:3px; }
