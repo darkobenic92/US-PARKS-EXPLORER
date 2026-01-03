@@ -65,17 +65,28 @@ The app will automatically open in your browser at http://localhost:5173/
 bashnpm run dev      # Start development server
 npm run build    # Build for production
 npm run preview  # Preview production build
+
 📂 Project Structure
 us-parks-explorer/
+
 ├── index.html          # Main HTML file
+
 ├── main.js             # Application logic
+
 ├── style.css           # Styles
+
 ├── vite.config.js      # Vite configuration
+
 ├── package.json        # Dependencies
+
 ├── .env                # API key (DO NOT COMMIT)
+
 ├── .env.example        # Example env file
+
 ├── .gitignore          # Git ignore rules
+
 └── README.md           # This file
+
 🌐 Data Source
 This project uses the official National Park Service API:
 
