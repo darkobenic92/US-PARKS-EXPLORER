@@ -11,7 +11,7 @@ body {
 #controlPanel {
     position: absolute; top: 10px; left: 10px;
     width: 320px; max-height: 90vh;
-    background: rgba(255,255,255,0.5); border-radius:10px;
+    background: rgba(22, 216, 16, 0.5); border-radius:10px;
     padding:15px; box-shadow:0 4px 12px rgba(0,0,0,0.3);
     overflow-y:auto; z-index:1000;
 }
@@ -31,7 +31,7 @@ body {
 .stat-item { display:flex; gap:4px; }
 
 .parks-list { display:flex; flex-direction:column; gap:6px; }
-.park-card { background:#32bb5b; padding:8px 10px; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.15); cursor:pointer; transition:transform 0.1s; }
+.park-card { background:#07d143; padding:8px 10px; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.15); cursor:pointer; transition:transform 0.1s; }
 .park-card:hover { transform:scale(1.02); }
 .park-name { font-weight:bold;  font-size:14px; }
 .park-info { font-size:12px; display:flex; align-items:center; gap:6px; margin-top:2px; }
@@ -52,4 +52,4 @@ body {
 .dark-mode input, .dark-mode select, .dark-mode #refreshBtn { background:#333; color:#f0f0f0; border:1px solid #555; }
 
 #controlPanel::-webkit-scrollbar, .legend::-webkit-scrollbar { width:6px; }
-#controlPanel::-webkit-scrollbar-thumb, .legend::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.3); border-radius:3px; }
+#controlPanel::-webkit-scrollbar-thumb, .legend::-webkit-scrollbar-thumb { background: rgba(12, 11, 11, 0.3); border-radius:3px; }
